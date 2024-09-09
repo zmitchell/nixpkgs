@@ -190,7 +190,9 @@ in
 ++ optional (atLeast6 && !atLeast13 && !withoutTargetLibc && targetPlatform.isMinGW && threadsCross.model == "mcf")
   (./. + "/${majorVersion}/Added-mcf-thread-model-support-from-mcfgthread.patch")
 
+## RedoxOS
 
+++ optional (atLeast13 && stdenv.targetPlatform.isRedox) ./redox.patch
 
 
 ##############################################################################
